@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Выход</title>
+	<!-- META TAGS -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'main/img/BPsmall.png' %}">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/animsition.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/flexslider.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body class="animsition">
+	<!-- HEADER  -->
+	<header class="main-header">
+		<div class="container">
+			<div class="menu">
+				<!-- desktop navbar -->
+				<nav class="desktop-nav">
+					<ul class="first-level">
+						<li><a href="index.html" class="animsition-link">Главная</a></li>
+						<li><a href="index.html" class="animsition-link">Актуальная информация</a></li>
+						<li><a href="index.html" class="animsition-link">Ранний доступ</a></li>
+						<li><a href="index.html" class="animsition-link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<!-- HERO SECTION  -->
+{% block content %}
+	<div class="site-hero_2">
+		<div class="page-title">
+			<div class="big-title montserrat-text uppercase">Вы успешно вышли со своего профиля</div>
+					<a href="{% url 'main:login' %}" class="btn green" style="float:left;margin-top:30px"><span>Авторизация</span></a>
+					<a href="{% url 'main:hello' %}" class="btn green" style="float:right;margin-top:30px"><span>Главная</span></a>
+		</div>
+	</div>
+{% endblock %}
+
+	<!-- DONATION  -->
+	<section class="green-section wow fadeInUp" style="padding:50px 0">
+		<div class="container">
+			<div class="col-md-6 col-sm-12">
+				<div class="row">
+					<span class="white-text montserrat-text uppercase" style="font-size:30px;display:block;">
+						Помочь проекту материально вы можете нажав по кнопке
+					</span>
+					<a href="#" class="btn white" style="margin-top:30px"><span>Спасибо</span></a>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<div class="row">
+					<div class="white-section" style="padding:20px">
+						<span class="montserrat-text uppercase" style="font-size:24px">Если вам нужна помощь или консультация</span>
+						<p>
+							Просто напишите тут совй номер телефона и наши сотрудники свяжутся с вами.
+						</p>
+						<form action="#" method="post">
+							<div class="input_1">
+								<input type="text" name="email">
+								<span>+375 29 1234 56 78</span>
+							</div>
+							<button type="submit" class="btn green" style="margin-top:20px"><span>Отправить</span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer wow fadeInUp">
+		<div class="container">
+			<div class="col-md-8 col-sm-12">
+				<div class="row">
+					<nav class="footer-nav">
+						<ul>
+							<li><a href="index.html" class="animsition-link link">Главная</a></li>
+							<li><a href="about.html" class="animsition-link link">Актуальная информация</a></li>
+							<li><a href="services.html" class="animsition-link link">Ранний доступ</a></li>
+							<li><a href="contact.html" class="animsition-link link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-12" style="text-align:right">
+				<div class="row">
+					<div class="uppercase gray-text">
+						Created by Brodo & Danyamaestro &copy;2021.</br> all rights reserved.
+					</div>
+					<ul class="social-icons" style="margin-top:30px;float:right">
+						<li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="{% static 'main/js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/smoothScroll.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/jquery.animsition.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/wow.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+			new WOW().init();
+
+			// initialise flexslider
+			$('.site-hero').flexslider({
+				animation: "fade",
+				directionNav: false,
+				controlNav: false, 
+				keyboardNav: true,
+				slideToStart: 0,
+				animationLoop: true,
+				pauseOnHover: false,
+				slideshowSpeed: 4000, 
+			});
+		});
+	</script>
+</body>
+</html>

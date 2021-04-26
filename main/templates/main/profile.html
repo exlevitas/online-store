@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+	<title>Профиль пользователя</title>
+	{% endblock %}
+	{% load static %}
+	<!-- META TAGS -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/BPsmall.png">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/animsition.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/flexslider.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body class="animsition">
+	<!-- HEADER  -->
+	<header class="main-header">
+		<div class="container">
+			<div class="menu">
+				<!-- desktop navbar -->
+				<nav class="desktop-nav">
+					<ul class="first-level">
+						<li><a href="index.html" class="animsition-link">Главная</a></li>
+						<li><a href="index.html" class="animsition-link">Актуальная информация</a></li>
+						<li><a href="index.html" class="animsition-link">Ранний доступ</a></li>
+						<li><a href="index.html" class="animsition-link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+{% block content %}
+	<!-- HERO SECTION  -->
+	<div class="site-hero_2">
+		<div class="page-title">
+			<div class="big-title montserrat-text uppercase">Профиль пользователя {{ user.username }}</div>
+			{% if user.first_name and user.last_name %}
+			<div class="small-title montserrat-text uppercase">Здравствуйте, {{ user.first_name }} {{ user.last_name }}!</div>
+						{% else %}
+							<div class="small-title montserrat-text uppercase">Здравствуйте!</div>
+						{% endif %}
+		</div>
+	</div>
+
+	<section class="services">
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<span>Магазин услуг</span>
+
+			<details style="margin-left:0%">
+   		 	<summary><img src="{% static 'main/img/vipblue.jpg' %}" style="width:300px;"> </summary>
+   	<h4>Что входит в VIP Silver?</h4>
+1. Бесплатные Silver* оружия с 3го раунда в вариантах:
+<br>A. АК-47 + Deagle [Silver]
+<br>B. M4A1 + Deagle [Silver]
+<br>C. Famas + Deagle [Silver]
+<br>D. AWP + Deagle [Silver]
+<br>2. Бесплатный набор гранат в виде HE/2 Flash/Smoke.
+<br>3. Бесплатная броня и шлем в начале каждого раунда.
+<br>4. Ваш цвет текста в чате выделяется зелёным цветом.
+<br>5. Оповещение в чат о вашем появлении на сервере.
+<br>6. VIP подпись в таблице счёта напротив вашего ника. (ТАВ)
+<br>7. Префикс [VIP]
+<br>8. Вампиризм только при убийстве в голову - +10хп
+    <h4>*Silver оружия.</h4>
+В отличии от обычных оружий и оружий в [VIP Gold], Silver оружия имеют синий окрас с логотипом сервера, а так же средний урон по отношению к предыдущим двум, а именно:
+<br>Золотой АК-47 - 115% урона, вместо 100%
+<br>Золотой M4A1 - 115% урона, вместо 100%
+<br>Золотой AWP - 150% урона, вместо 100%
+<br>Золотой DEAGLE - 110% урона, вместо 100%
+<br>Золотой KNIFE - 150% урона, вместо 100%
+<br>Золотой FAMAS - 115% урона, вместо 100%
+    <br><strong>Стоимость услуги - 10 белорусских рублей / месяц.</strong>
+<br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br>
+
+<details style="margin-left:0%">
+    <summary><img src="{% static 'main/img/vipgoldblue.jpg' %}" style="width:300px;"> </summary>
+    <h4>Что входит в VIP Gold?</h4>
+1. Бесплатные Gold* оружия с 3го раунда в вариантах:
+<br>A. АК-47 + Deagle [Gold]
+<br>B. M4A1 + Deagle [Gold]
+<br>C. Famas + Deagle [Gold]
+<br>D. AWP + Deagle [Gold]
+<br>2. Бесплатный набор гранат в виде HE/2 Flash/Smoke.
+<br>3. Бесплатная броня и шлем в начале каждого раунда.
+<br>4. Дополнительные 10% здоровья. 110хп, вместо стандартных 100хп.
+<br>5. Вампиризм. Вампиризм - это характеристика, которая дает возможность восстанавливать игроку здоровье на процент от урона, нанесенного им по вражескому игроку.
+<br>6. Ваш цвет текста в чате выделяется зелёным цветом.
+<br>7. Оповещение в чат о вашем появлении на сервере.
+<br>8. VIP подпись в таблице счёта напротив вашего ника. (ТАВ)
+<br>9. Префикс [VIP Gold]
+
+    <h4>*Gold оружия.</h4>
+В отличии от обычных оружий и оружий в [VIP Silver], Gold оружия имеют черный, а так же повышенный урон по отношению к предыдущим двум, а именно:
+<br>Золотой АК-47 - 135% урона, вместо 100%
+<br>Золотой M4A1 - 135% урона, вместо 100%
+<br>Золотой AWP - 200% урона, вместо 100%
+<br>Золотой DEAGLE - 120% урона, вместо 100%
+<br>Золотой KNIFE - 200% урона, вместо 100%
+<br>Золотой FAMAS - 130% урона, вместо 100%
+    <br><strong>Стоимость услуги - 20 белорусских рублей / месяц.</strong>
+    <br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br>
+
+
+<details style="margin-left:0%;">
+    <summary><img src="{% static 'main/img/adminvipblue.jpg' %}" style="width:300px;"> </summary>
+    <h4>Что входит в права администратора?</h4>
+1. Право доступа к админ меню.
+<br>2. VIP простая
+<br>3. Право переноса любого игрока из одной команды в другую.
+<br>4. Право доступа к меню BAN, KICK.
+<br>5. Право доступа к GAG-menu. Меню, в котором Вы можете заткнуть игроку чат, микрофон или оба средства связи разом.
+<br>6. Право пинать/убивать игроков, которые занимаются кэмперством.
+<br>7. Право к меню создания голосований на смену карты.
+<br>8. Admin ESP. Админский WallHack. Либо после вашей смерти, либо тогда, когда вы находитесь в спекторах, у вас будет появляться админский ВХ, чтобы проверять игроков на наличие читов.
+<br>9. Префикс [Admin]
+    <br><strong>Стоимость услуги - 30 белорусских рублей / месяц.</strong>
+    <br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br>
+
+<details style="margin-left:0%">
+    <summary><img src="{% static 'main/img/adminvipgoldblue.jpg' %}" style="width:300px;"> </summary>
+    <h4>Что входит в права ADMIN+VIP GOLD</h4>
+1. Право доступа к админ меню.
+<br>2. Право доступа к оружию Vip Gold. % дамага больше чем у обычной випки
+<br>3. Право переноса любого игрока из одной команды в другую.
+<br>4. Право доступа к меню BAN, KICK.
+<br>5. Право доступа к GAG-menu. Меню, в котором Вы можете заткнуть игроку чат, микрофон или оба средства связи разом.
+<br>6. Право пинать/убивать игроков, которые занимаются кэмперством.
+<br>7. Право к меню создания голосований на смену карты.
+<br>9. Admin ESP. Админский WallHack. Либо после вашей смерти, либо тогда, когда вы находитесь в спекторах, у вас будет появляться админский ВХ, чтобы проверять игроков на наличие читов.
+<br>10. Префикс [Admin Gold]
+    <br><strong>Стоимость услуги - 40 белорусских рублей / месяц.</strong>
+    <br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br><br>
+
+<details style="margin-left:0%">
+    <summary><img src="{% static 'main/img/reset.jpg' %}" style="width:300px;"> </summary>
+    <h4>Что входит в услугу обнуления статистики?</h4>
+1. Обнуление статистики до изначальной.
+<br>2. Автоматически установится звание - Рядовой
+<br>3. Автоматически установится Скилл - M (100)
+    <br><strong>Стоимость услуги - 5 белорусских рублей / месяц.</strong>
+    <br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br><br>
+
+<details style="margin-left:0%">
+    <summary><img src="{% static 'main/img/sponsor.jpg' %}" style="width:300px;"></summary>
+<h4>Что входит в услугу Gold Sponsor?</h4>
+1. Вы будете почетным лицом на сервере и будете иметь, по желанию, приставку к нику [Меценат G], либо [Cпонсор G].
+<br>2. Мы выдаём вам [Admin Full].
+<br>3. Мы выдаём вам [VIP Gold].
+<br>4. Мы выдаём вам Иммунитет.
+<br>5. Ранг спонсорства Gold имеет свою собственную модельку игрока.
+<br>6. Вы будете всегда в курсе важных новостей и будете участвовать в обсуждениях, а также принимать решения вместе с нами.
+    <br><br><em>[Admin Full] - Админ права, имеющие большее кол-во флагов, нежели чем в стандартной админке. Больше доступов.</em>
+<br><br>VIP Gold отличается от обычного VIP меню тем, что:
+<br>1. Оружия имеют повышенный урон в отношении к стандартному оружию на сервере и тому, что находится в обычном VIP меню.
+<br>2. Игрок имеет вампиризм. Вампиризм -это характеристика, которая дает возможность восстанавливать игроку здоровье на процент от урона, нанесенного им по вражескому игроку.
+<br>3. Игрок имеет дополнительные 10% здоровья, то есть 110хп, вместо стандартных 100хп.
+    <br>4. 15.000 Бонусов /anew
+    <br><br><em>Спонсор ранга Gold будет иметь индивидуальную для всей группы Gold Спонсоров модельку, которая выбирается на усмотрение администрации. Модель визуально выделяется среди стандартных моделей и отличается от моделей спонсоров ранга Silver.</em>
+<br><strong>Стоимость: 1 месяц - 50 белорусских рублей, 3 месяца - 100 рублей, вместо 150 рублей,  6 месяцев - 225 рублей, вместо 300р.
+        <br><strong>За приобретением услуги обращаться напрямую к основателю: VK - <a href="https://vk.com/neverhappyagain/">Даниил Кондратенко</a></strong>
+</details><br><br>
+
+
+<a href="{% url 'main:hello' %}" class="btn green" style="float:left;margin-left: -15px"><span>Главная</span></a>
+<a href="{% url 'main:logout' %}" class="btn green" style="float:right;margin-left: -40px"><span>Выйти</span></a>
+{% endblock %}
+
+
+				</div>
+			</div>
+
+	<!-- FOOTER -->
+	<footer class="main-footer wow fadeInUp">
+		<div class="container">
+			<div class="col-md-8 col-sm-12">
+				<div class="row">
+					<nav class="footer-nav">
+						<ul>
+							<li><a href="index.html" class="animsition-link link">Главная</a></li>
+							<li><a href="about.html" class="animsition-link link">Актуальная информация</a></li>
+							<li><a href="services.html" class="animsition-link link">Ранний доступ</a></li>
+							<li><a href="contact.html" class="animsition-link link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-12" style="text-align:right">
+				<div class="row">
+					<div class="uppercase gray-text">
+						Created by Brodo & Danyamaestro &copy;2021.</br> all rights reserved.
+					</div>
+					<ul class="social-icons" style="margin-top:30px;float:right">
+						<li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+						<li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="{% static 'main/js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/smoothScroll.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/jquery.animsition.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/wow.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+			new WOW().init();
+
+			// initialise flexslider
+			$('.site-hero').flexslider({
+				animation: "fade",
+				directionNav: false,
+				controlNav: false,
+				keyboardNav: true,
+				slideToStart: 0,
+				animationLoop: true,
+				pauseOnHover: false,
+				slideshowSpeed: 4000,
+			});
+		});
+	</script>
+</body>
+</html>
